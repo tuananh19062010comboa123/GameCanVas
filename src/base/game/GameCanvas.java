@@ -45,7 +45,7 @@ public class GameCanvas extends JPanel {
         playerBullets = new ArrayList<>();
     }*/
    public GameCanvas(){
-       this.background = GameObject.create(Background.class);
+       this.background = GameObject.recycle(Background.class);
         /* this.player = new Player();
        enemies = new ArrayList<>();
        for (int i = 0; i < 5; i ++) {
@@ -54,13 +54,15 @@ public class GameCanvas extends JPanel {
            enemies.add(enemy);
        }
        playerBullets = new ArrayList<>();*/
-       for(int i = 0 ; i< 5;i++){
-           Enemy enemy = GameObject.create(Enemy.class);
-           enemy.position = new Vector2D(i*90,0);
+       for(int i = 0 ; i< 2;i++){
+           Enemy enemy = GameObject.recycle(Enemy.class);
+           enemy.position = new Vector2D(i*90+150,50);
        }
-       //  Enemy enemy = GameObject.create(Enemy.class);
 
-       this.player = GameObject.create(Player.class);
+     /*  this.enemy = GameObject.recycle(Enemy.class);*/
+       //Enemy enemy = GameObject.recycle(Enemy.class);
+
+       this.player = GameObject.recycle(Player.class);
 
 
    }

@@ -9,6 +9,7 @@ import java.awt.image.BufferedImage;
 public class Background extends GameObject {
     //Renderer  renderer; da co tu GameObject
     public Background(){
+        super();
         BufferedImage image = SpriteUtils.loadImage("assets/images/background/0.png");
        // this.image = image;
         this.renderer = new SingleImageRenderer(image);// trong  GameObject co thuco tinh Renderer
