@@ -59,7 +59,7 @@ public class GameCanvas extends JPanel {
            enemy.position = new Vector2D(i*90+150,50);
        }
 
-     /*  this.enemy = GameObject.recycle(Enemy.class);*/
+      /* this.enemy = GameObject.recycle(Enemy.class);*/
        //Enemy enemy = GameObject.recycle(Enemy.class);
 
        this.player = GameObject.recycle(Player.class);

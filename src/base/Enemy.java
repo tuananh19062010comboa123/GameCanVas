@@ -39,7 +39,7 @@ public class Enemy extends GameObject implements Physics {
       this.renderer = new AnimationRenderer(images);*/
       this.position = new Vector2D(200,100);
       this.collider = new BoxCollider(28,28);
-      this.shootCountEnemy = new FrameCount(10);// nhanh hay chậm quyết định ở đây !!!
+      this.shootCountEnemy = new FrameCount(15);// nhanh hay chậm quyết định ở đây !!!
         /*this.receiveBullet = new FrameCount(3);*/
     }
 

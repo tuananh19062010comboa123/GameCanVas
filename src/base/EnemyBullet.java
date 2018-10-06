@@ -56,7 +56,7 @@ public class EnemyBullet extends GameObject implements Physics{
             this.destroy();
             return;
         }
-        this.position.y += 3;
+        this.position.y += 1;
         this.position.addThis(velocity.x,velocity.y);// cái quyết định để đổi hướng
     }
 
