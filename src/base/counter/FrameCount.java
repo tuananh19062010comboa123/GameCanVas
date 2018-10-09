@@ -19,4 +19,15 @@ public class FrameCount {
     public  void reset(){
         this.frameCount = 0;
     }
+   /* public boolean run(){
+        if(frameCount >= maxCount){
+            return true;
+        }else {
+            frameCount++;
+            return false;
+        }
+    }
+    public void reset(){
+        this.frameCount = 0;
+    }*/
 }

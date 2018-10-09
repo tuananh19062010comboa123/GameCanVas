@@ -1,11 +1,11 @@
 package base;
 
+import base.physic.Physics;
 import base.renderer.Renderer;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class GameObject {
     public static ArrayList<GameObject> gameObjects = new ArrayList<>();
@@ -93,6 +93,7 @@ public class GameObject {
     }
 
     public static void  renderAll(Graphics g){
+
         for(GameObject go : gameObjects){//for kiểu này : mỗi lần lặp lại của vòng loop trong GameWindow
             if(go.isActive){             // nếu dể thế này thì gameObjects.length van giữ độ dài của lần chạy đầu tiên
                 go.render(g);            // khi mà tạo ra cá đối tượng mới ở lần chạy tiếp theo thì lengt vẫn ko đổi
@@ -106,7 +107,7 @@ public class GameObject {
 
 
     BufferedImage image;
-    Renderer renderer ;
+    public   Renderer renderer ;
     public Vector2D position;
     public boolean isActive;// check
 

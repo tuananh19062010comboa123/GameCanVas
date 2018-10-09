@@ -1,7 +1,6 @@
 package base.game;
 
-import base.KeyEventPress;
-import base.game.GameCanvas;
+import base.event.KeyEventPress;
 
 import javax.swing.*;
 import java.awt.event.KeyAdapter;

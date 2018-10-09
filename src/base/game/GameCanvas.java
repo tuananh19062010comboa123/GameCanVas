@@ -1,11 +1,12 @@
 package base.game;
 
 import base.*;
+import base.enemy.Enemy;
+import base.enemy.EnemySummoner;
+import base.player.Player;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.util.ArrayList;
 
 public class GameCanvas extends JPanel {
    /* BufferedImage background;
@@ -27,6 +28,7 @@ public class GameCanvas extends JPanel {
    Background background;
    Player player;
    Enemy enemy;
+   EnemySummoner enemySummoner ;
    /*public static ArrayList<Enemy> enemies ;
     public static ArrayList<PlayerBullet> playerBullets ;*/
 
@@ -54,13 +56,17 @@ public class GameCanvas extends JPanel {
            enemies.add(enemy);
        }
        playerBullets = new ArrayList<>();*/
-       for(int i = 0 ; i< 2;i++){
+       /*for(int i = 0 ; i< 2;i++){
            Enemy enemy = GameObject.recycle(Enemy.class);
            enemy.position = new Vector2D(i*90+150,50);
-       }
+       }*/
 
-      /* this.enemy = GameObject.recycle(Enemy.class);*/
-       //Enemy enemy = GameObject.recycle(Enemy.class);
+
+       this.enemySummoner = GameObject.recycle(EnemySummoner.class);
+
+     //  this.enemy = GameObject.recycle(Enemy.class);
+
+
 
        this.player = GameObject.recycle(Player.class);
 

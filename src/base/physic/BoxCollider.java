@@ -1,4 +1,6 @@
-package base;
+package base.physic;
+
+import base.GameObject;
 
 public class BoxCollider {
     public int width;
