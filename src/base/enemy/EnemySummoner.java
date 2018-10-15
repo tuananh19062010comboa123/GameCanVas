@@ -1,5 +1,6 @@
 package base.enemy;
 
+import base.Background;
 import base.GameObject;
 import base.Vector2D;
 import base.action.Action;
@@ -72,6 +73,9 @@ public class EnemySummoner extends GameObject implements Physics {
     }
 
     public void shoot (){
+        if(Background.countBackground == 5){
+            return;
+        }
         Enemy enemy1 = GameObject.recycle(Enemy.class);
         Enemy enemy2 = GameObject.recycle(Enemy.class);
         Enemy enemy3 = GameObject.recycle(Enemy.class);

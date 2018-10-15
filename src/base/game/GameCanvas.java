@@ -4,9 +4,12 @@ import base.*;
 import base.enemy.Enemy;
 import base.enemy.EnemySummoner;
 import base.player.Player;
+import base.renderer.SingleImageRenderer;
+import tklibs.SpriteUtils;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class GameCanvas extends JPanel {
    /* BufferedImage background;
@@ -48,6 +51,8 @@ public class GameCanvas extends JPanel {
     }*/
    public GameCanvas(){
        this.background = GameObject.recycle(Background.class);
+        //((SingleImageRenderer) this.background.renderer).image
+        //((AnimationRenderer) bullet.renderer).images.add(SpriteUtils.loadImage("assets/images/sphere-bullets/0.png"))
         /* this.player = new Player();
        enemies = new ArrayList<>();
        for (int i = 0; i < 5; i ++) {

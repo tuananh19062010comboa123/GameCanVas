@@ -40,7 +40,7 @@ public class Player extends GameObject implements Physics {
         this.renderer = new AnimationRenderer(images);
 
        // this.renderer = new SingleImageRenderer("assets/images/players/straight/0.png");
-        this.position = new Vector2D(Settings.Start_PLAYER_POSITION_X,Settings.Start_PLAYER_POSITION_y);
+        this.position = new Vector2D(Settings.Start_PLAYER_POSITION_X+20,Settings.Start_PLAYER_POSITION_y);
         this.collider = new BoxCollider(32,48);
         this.shootCount = new FrameCount(10);
     }

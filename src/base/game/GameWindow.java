@@ -65,6 +65,7 @@ public class GameWindow extends JFrame {
                 }
             }
         });
+
     }
 
     /* void loadImageoWindow(){

@@ -54,8 +54,10 @@ public class Enemy extends GameObject implements Physics {
    //   this.shootCountEnemy = new FrameCount(15);// nhanh hay chậm quyết định ở đây !!!
 
         /*this.action = new Action() { //cach khai bao action truc tiep
+                                        //de thagn nay chay duoc la phai co than
             @Override
-            public void run(GameObject master) {//chay thay the ham run o duoi
+            public void run(GameObject master) {//chay thay the ham run o duoi , don gian enmy chay the nao ,ngang doc . .  .
+                                                // THANG NAY CHAY KHI GAMEoBJECTS ,RUN CHAY
             master.position.addThis(+5,5);
             }
 
@@ -82,6 +84,18 @@ public class Enemy extends GameObject implements Physics {
                 this.isDone = false;
             }
         };
+
+       /* Action tesst = new Action() { // de thagn nay chay duoc la phai co than
+            @Override
+            public void run(GameObject master) {
+
+            }
+
+            @Override
+            public void reset() {
+
+            }
+        };*/
         ActionSequence actionSequence = new ActionSequence(actionWait,actionFire);
         ActionRepeat actionRepeat = new ActionRepeat(actionSequence);
         this.action = actionRepeat;
@@ -96,11 +110,19 @@ public class Enemy extends GameObject implements Physics {
         }
       /*  this.position.y += 1;*/
         this.position.addThis(velocity.x,velocity.y);// cái quyết định để đổi hướng
-
         this.action.run(this);
 
-
     }
+
+   /* public void settingPositionEnemyBullet(BoxCollider enemyCollider , BoxCollider enemyBulletCollider){
+        //thay doi position  cho enemyBullet o giua enemy
+
+        enemyCollider = this.collider;
+        enemyBulletCollider = EnemyBullet.collider;
+
+        int newpositionX = this.position.x + this.
+
+    }*/
 
     public void shoot (){
         EnemyBullet enemyBullet = GameObject.recycle(EnemyBullet.class);

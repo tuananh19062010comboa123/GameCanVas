@@ -2,14 +2,20 @@ package base;
 
 import base.physic.Physics;
 import base.renderer.Renderer;
+import base.renderer.SingleImageRenderer;
+import tklibs.SpriteUtils;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
+import static base.Background.countDelayMoveMap;
+
 public class GameObject {
     public static ArrayList<GameObject> gameObjects = new ArrayList<>();
     public static ArrayList<GameObject> newGameObjects = new ArrayList<>();// add thang moi
+    /*public static int count2;
+    public static int count3;*/
 
 
     /*public static int countBullet ;*/
@@ -81,7 +87,11 @@ public class GameObject {
         /*for( GameObject go : gameObjects){
             go.run();
         }*/
+
         for(int i = 0  ; i< gameObjects.size();i++){
+            if(Background.countBackground == 5 && countDelayMoveMap == 5){
+              //xu lý change image trong nay co the viet truc tip hoac tach ra lam 1 funtion
+            }
             /*gameObjects.get(i).run();*/
             GameObject go  = gameObjects.get(i);
             if(go.isActive){

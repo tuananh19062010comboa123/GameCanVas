@@ -12,8 +12,9 @@ import java.util.ArrayList;
 
 public class EnemyBullet extends GameObject implements Physics {
     Vector2D velocity ;
-    BoxCollider collider;
+    public static BoxCollider collider;
     int damge;
+    //get BoxCollider EnemyBullet
 
     public EnemyBullet(){
         super();
@@ -64,6 +65,7 @@ public class EnemyBullet extends GameObject implements Physics {
             this.destroy();
             return;
         }
+
        /* this.position.y += 1;*/
         this.position.addThis(velocity.x,velocity.y);// cái quyết định để đổi hướng
     }
