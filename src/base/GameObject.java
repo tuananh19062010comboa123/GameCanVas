@@ -14,8 +14,8 @@ import static base.Background.countDelayMoveMap;
 public class GameObject {
     public static ArrayList<GameObject> gameObjects = new ArrayList<>();
     public static ArrayList<GameObject> newGameObjects = new ArrayList<>();// add thang moi
-    /*public static int count2;
-    public static int count3;*/
+    public static int count2;
+    public static int count3;
 
 
     /*public static int countBullet ;*/
@@ -89,8 +89,15 @@ public class GameObject {
         }*/
 
         for(int i = 0  ; i< gameObjects.size();i++){
-            if(Background.countBackground == 5 && countDelayMoveMap == 5){
-              //xu lý change image trong nay co the viet truc tip hoac tach ra lam 1 funtion
+            if(Background.countBackground == 5 && countDelayMoveMap == 211){
+                count2++;
+                if(count2 == 1){// chi chay 1 lan ! ahihi neu ko count thi cho nay chay lien tuc enemy chay cham ko nhu y mun
+                    count3++;
+                    BufferedImage newImage = SpriteUtils.loadImage("assets/images/scenes/game-over-background.jpg");
+                    /* ((SingleImageRenderer) this.background.renderer).image = image;*/ //getImage
+                    ((SingleImageRenderer) gameObjects.get(0).renderer).image = newImage;
+
+                }
             }
             /*gameObjects.get(i).run();*/
             GameObject go  = gameObjects.get(i);

@@ -17,11 +17,20 @@ public class Background extends GameObject {
         this.renderer = new SingleImageRenderer(image);// trong  GameObject co thuco tinh Renderer
         //  ???  tao moi SingleImageRenderer la doi tuong Renderer
         this.position = new Vector2D(0,-(image.getHeight() - Settings.SCREEN_HEIGHT));
-        //assets/images/scenes/game-over-background.jpg
-    }
+
+    }//assets/images/scenes/game-over-background.jpg
 
     @Override
     public void run() {
+      /*  // neu mun di chuyen lai co the them !! nhung can xu ly di chuyen bawng 1 funcion rieng de ko phai goi lai
+        if(GameObject.count2 == 2){
+
+        }*/
+      if(count3 == 1 ){ //reset countBackground de khi sang map moi enemysummoner tiep tuc ban quai
+          //System.out.print(count2); // ? 54
+          countBackground = 0;
+          return;
+      }
 
          if(this.position.y >= 0) {
              countDelayMoveMap++;
