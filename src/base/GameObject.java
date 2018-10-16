@@ -93,9 +93,10 @@ public class GameObject {
                 count2++;
                 if(count2 == 1){// chi chay 1 lan ! ahihi neu ko count thi cho nay chay lien tuc enemy chay cham ko nhu y mun
                     count3++;
-                    BufferedImage newImage = SpriteUtils.loadImage("assets/images/scenes/game-over-background.jpg");
+                    BufferedImage newImage = SpriteUtils.loadImage("assets/images/scenes/44115792_1948020738611827_7634823067545370624_n.jpg");
                     /* ((SingleImageRenderer) this.background.renderer).image = image;*/ //getImage
                     ((SingleImageRenderer) gameObjects.get(0).renderer).image = newImage;
+                    gameObjects.get(0).position = new Vector2D(0,-(newImage.getHeight() - Settings.SCREEN_HEIGHT));
 
                 }
             }

@@ -29,6 +29,11 @@ public class Background extends GameObject {
       if(count3 == 1 ){ //reset countBackground de khi sang map moi enemysummoner tiep tuc ban quai
           //System.out.print(count2); // ? 54
           countBackground = 0;
+          if(this.position.y >= 0) {
+             return;
+          }else {
+              this.position.y += 5;
+          }
           return;
       }
 
